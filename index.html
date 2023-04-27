@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>CIS2750 A4 Mol Display</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+
+<style ref="style.css"></style>
+
+
+<body>
+    <title>Cis2750 A4 Molecule Display</title>
+
+    <div>
+        <form id="elementForm">
+            <label for="ElementNum">Element Number:</label>
+            <input type="text" id="ElementNum" name="ElementNumber" required>
+
+            <label for="ECode">Element Code:</label>
+            <input type="text" id="ECode" name="ElementCode" required>
+
+            <label for="EName">Element Name:</label>
+            <input type="text" id="EName" name="ElementName" required>
+
+            <label for="ERad">Element Radius:</label>
+            <input type="text" id="ERad" name="ElementRadius" required>
+
+            <label for="Color1">Element Color 1:</label>
+            <input type="color" id="EC1" name="ElementColor1" required>
+
+            <label for="Color2">Element Colour 2:</label>
+            <input type="color" id="EC2" name="ElementColour2" required>
+
+            <label for="Color3">Element Colour 3:</label>
+            <input type="color" id="EC3" name="ElementColour3" required>
+
+            <input type="submit" value="Upload Elment Data">
+        </form>
+    </div>
+
+
+
+
+
+    <!-- ADDING AN UPLOAD FILE BUTTON ALONG WITH MOLECULE NAME: -->
+    <div>
+        <form id="Upload">
+            <label for="SDFUpload">UPLOAD SDF FILE HERE</label>
+            <input type="file" id="SDFUpload" name="SDFUpload">
+
+            <div style="margin-top: 20px;">
+                <label for="MoleculeName">Enter a molecule name:</label>
+                <input type="text" id="MoleculeName" name="MoleculeName">
+            </div>
+
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+
+
+
+    <!-- ADDING A SELECT MOLECULE DROP DOWN MENU: *******************-->
+    <div>
+        <label for="MoleculeList">Select a molecule:</label>
+        <select id="MoleculeList" name="MoleculeList">
+            <option value="">--Please select a molecule--</option>
+        </select>
+    </div>
+
+    <!-- CREATING DYNAMIC TABLE: -->
+    <table id="ElementTable">
+        <thead>
+            <tr>
+                <th class="col1">Element Number</th>
+                <th class="col2">Element Code</th>
+                <th class="col3">Element Name</th>
+                <th class="col5">Colour 1</th>
+                <th class="col6">Colour 2</th>
+                <th class="col7">Colour 3</th>
+                <th class="col4">Element Radius</th>
+                <th class="col8">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div id="display-svg"></div>
+
+
+    <!-- <div>
+        <form id="input-angle">
+            <label for="angleUpload">Enter an angle value (0-360) .</label>
+            <input type="text" id="angleUpload" name="angleUpload">
+
+            <button type="button" class="angle-button" id="X">X</button>
+            <button type="button" class="angle-button" id="Y">Y</button>
+            <button type="button" class="angle-button" id="Z">Z</button>
+        </form>
+    </div> -->
+
+    <div>
+        <form id="input-angle">
+            <label for="AngleX">Enter an angle value (0-360) for X:</label>
+            <input type="text" id="angleX" name="AngleX" required>
+
+            <label for="AngleY">Enter an angle value (0-360) for Y:</label>
+            <input type="text" id="angleY" name="AngleY" required>
+
+            <label for="AngleZ">Enter an angle value (0-360) for Z:</label>
+            <input type="text" id="angleZ" name="AngleZ" required>
+
+            <input type="submit" value="Upload Angle Data">
+        </form>
+    </div>
+
+
+</html>
